@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chess System Web</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="layout">
+    <section>
+      <h1>Chess System (Web)</h1>
+      <p>Interface interativa para portfolio (GitHub Pages).</p>
+      <div id="board" class="board" aria-label="Tabuleiro de xadrez"></div>
+      <div class="actions">
+        <button id="resetBtn">Reiniciar partida</button>
+      </div>
+    </section>
+
+    <aside class="panel">
+      <h2>Status</h2>
+      <p id="status"></p>
+
+      <h3>Capturadas (Brancas)</h3>
+      <p id="capturedWhite">-</p>
+
+      <h3>Capturadas (Pretas)</h3>
+      <p id="capturedBlack">-</p>
+
+      <h3>PGN</h3>
+      <pre id="pgn"></pre>
+    </aside>
+  </main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

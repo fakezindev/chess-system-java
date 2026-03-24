@@ -13,7 +13,15 @@ import chess.ChessPosition;
 public class Program {
 
 	public static void main(String[] args) {
-		
+		if (args.length > 0 && "--cli".equalsIgnoreCase(args[0])) {
+			runConsoleMode();
+			return;
+		}
+
+		new ChessGUI().show();
+	}
+
+	private static void runConsoleMode() {
 		Scanner sc = new Scanner(System.in);
 		ChessMatch chessMatch = new ChessMatch();
 		List<ChessPiece> captured = new ArrayList<>();

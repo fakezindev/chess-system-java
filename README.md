@@ -21,6 +21,7 @@ O jogo de xadrez para console inclui as seguintes funcionalidades:
     * Armazena e exibe as peças capturadas.
     * Sistema de verificação de **Xeque** e **Xeque-Mate**.
 * **Interface no Terminal**: Interface simples e funcional com cores para melhorar a experiência do usuário.
+* **Interface Web Interativa (GitHub Pages)**: Tabuleiro clicável com destaque de jogadas possíveis, status da partida, promoção e lista de peças capturadas.
 * **Tratamento de Erros**: Mensagens de erro claras para jogadas inválidas, garantindo a robustez do programa.
 
 ---
@@ -54,13 +55,21 @@ Siga os passos abaixo para baixar e executar o projeto na sua máquina.
     cd chess-system-java
     ```
 
-3.  **Compile e Execute**:
-    * **Via IDE (Recomendado)**: Importe o projeto para sua IDE favorita e execute a classe `Program.java` no pacote `application`.
+3.  **Executar localmente**:
+    * **Versão Web (portfolio / GitHub Pages)**:
 
-    * **Via Terminal**:
-        Se o projeto estiver configurado para ser executado via um arquivo `.jar`, procure por um arquivo como `chess-system-java.jar` na pasta `exported` ou `bin`. Em seguida, execute-o com o seguinte comando:
+      Rode um servidor estático na raiz do projeto e acesse `docs/index.html`:
 
-        ```bash
-        java -jar chess-system-java.jar
-        ```
-        (Se o comando acima não funcionar, pode ser que o projeto precise ser executado de uma forma diferente, por exemplo: `java -cp .:.bin/ application.Program`)
+      ```bash
+      python3 -m http.server 8080
+      ```
+      Depois abra: `http://localhost:8080/docs/`
+
+    * **Publicar no GitHub Pages**:
+      - Faça push da branch para o GitHub.
+      - Em **Settings > Pages**, escolha **Deploy from a branch**.
+      - Selecione a branch (ex: `main`) e a pasta `/docs`.
+      - Salve e aguarde o link público da página.
+
+    * **Modo Java CLI (legado)**:
+      Continua disponível no código Java, executando `application.Program --cli` em ambiente Java.
